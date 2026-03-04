@@ -39,6 +39,9 @@ import { opencodeSisyphusTool, opencodePrometheusTool, opencodeSubagentTool } fr
 // superpower skill 技能系统
 import { opencodeSkillListTool, opencodeSkillUseTool } from './opencode-skills.js';
 
+// Stop Hook 任务回调
+import { opencodeHookDispatchTool, opencodeHookResultTool, opencodeHookWakeTool } from './opencode-hooks.js';
+
 /**
  * 所有可用工具列表
  * 新增工具时在此处添加即可自动注册到 MCP Server
@@ -75,4 +78,9 @@ export const ALL_TOOLS: ToolDefinition[] = [
     // === superpower skill ===
     opencodeSkillListTool,
     opencodeSkillUseTool,
+
+    // === Stop Hook 任务回调 ===
+    opencodeHookDispatchTool,
+    opencodeHookResultTool,
+    opencodeHookWakeTool,
 ];

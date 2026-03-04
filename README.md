@@ -1,5 +1,7 @@
 # OpenCode MCP Server
 
+**中文** | [English](./README_EN.md)
+
 > 通过 MCP 协议将 OpenCode CLI 的 **全部** AI 编码能力暴露为标准化工具服务，支持 oh-my-opencode 多代理编排和 superpower skill 技能系统。
 
 ## 架构
@@ -27,7 +29,7 @@ npm install
 npm run build
 ```
 
-## 18 个 MCP 工具
+## 21 个 MCP 工具
 
 ### 核心（3）
 
@@ -82,6 +84,14 @@ npm run build
 | `opencode_skill_list` | 列出可用技能 |
 | `opencode_skill_use` | 激活并使用技能 |
 
+### Stop Hook 任务回调（3）
+
+| 工具 | 说明 |
+|------|------|
+| `opencode_hook_dispatch` | 派发 OpenCode 任务（自动回调） |
+| `opencode_hook_result` | 读取 Stop Hook 结果（latest.json） |
+| `opencode_hook_wake` | 读取/处理唤醒文件（pending-wake.json） |
+
 ## OpenClaw 配置
 
 ```json
@@ -109,6 +119,7 @@ npm run build
 | `OPENCODE_WORKSPACE` | `.` | 默认工作目录 |
 | `OPENCODE_MODEL` | (空) | 默认模型 |
 | `OPENCODE_MAX_OUTPUT` | `10485760` | 最大输出（字节） |
+| `HOOK_RESULT_DIR` | `~/opencode-data/hook-results` | Hook 结果文件目录 |
 
 ## 项目结构
 
@@ -130,7 +141,8 @@ opencode-mcp-server/
 │   │   ├── opencode-command-run.ts # 自定义命令
 │   │   ├── opencode-serve.ts       # 服务模式（2个）
 │   │   ├── opencode-omoc.ts        # oh-my-opencode（3个）
-│   │   └── opencode-skills.ts      # superpower（2个）
+│   │   ├── opencode-skills.ts      # superpower（2个）
+│   │   └── opencode-hooks.ts       # Stop Hook 任务回调（3个）
 │   └── __tests__/                  # 单元测试
 ├── package.json
 ├── tsconfig.json

@@ -26,6 +26,8 @@ export interface ServerConfig {
     readonly serverName: string;
     /** 服务器版本 */
     readonly serverVersion: string;
+    /** Stop Hook 结果文件目录 */
+    readonly hookResultDir: string;
 }
 
 /**
@@ -40,6 +42,7 @@ const DEFAULT_CONFIG: ServerConfig = {
     maxOutputBytes: 10 * 1024 * 1024, // 10 MB
     serverName: 'opencode-mcp-server',
     serverVersion: '1.0.0',
+    hookResultDir: './data/open-code-results',
 };
 
 /**
@@ -51,6 +54,7 @@ const DEFAULT_CONFIG: ServerConfig = {
  * - OPENCODE_WORKSPACE  → defaultWorkspace
  * - OPENCODE_MODEL      → defaultModel
  * - OPENCODE_MAX_OUTPUT  → maxOutputBytes
+ * - HOOK_RESULT_DIR     → hookResultDir
  *
  * @returns 已合并的最终配置（不可变）
  */
@@ -65,6 +69,7 @@ export function loadConfig(): Readonly<ServerConfig> {
         maxOutputBytes: parseIntOrDefault(env['OPENCODE_MAX_OUTPUT'], DEFAULT_CONFIG.maxOutputBytes),
         serverName: DEFAULT_CONFIG.serverName,
         serverVersion: DEFAULT_CONFIG.serverVersion,
+        hookResultDir: env['HOOK_RESULT_DIR'] ?? DEFAULT_CONFIG.hookResultDir,
     });
 }
 

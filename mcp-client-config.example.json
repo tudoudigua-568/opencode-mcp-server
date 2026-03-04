@@ -8,7 +8,8 @@
             ],
             "env": {
                 "OPENCODE_TIMEOUT_MS": "120000",
-                "OPENCODE_WORKSPACE": "D:/projects"
+                "OPENCODE_WORKSPACE": "D:/projects",
+                "HOOK_RESULT_DIR": "D:/data/open-code-results"
             }
         }
     }

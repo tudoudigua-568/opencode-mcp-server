@@ -86,8 +86,8 @@ describe('ToolRegistry', () => {
 });
 
 describe('ALL_TOOLS 集成验证', () => {
-    it('应包含 18 个工具', () => {
-        expect(ALL_TOOLS).toHaveLength(18);
+    it('应包含 21 个工具', () => {
+        expect(ALL_TOOLS).toHaveLength(21);
     });
 
     it('所有工具名称应唯一', () => {
@@ -113,7 +113,7 @@ describe('ALL_TOOLS 集成验证', () => {
     it('应可批量注册到 ToolRegistry', () => {
         const registry = new ToolRegistry();
         registry.registerAll(ALL_TOOLS);
-        expect(registry.size).toBe(18);
+        expect(registry.size).toBe(21);
     });
 
     it('工具名称列表应包含全部预期工具', () => {
@@ -150,5 +150,10 @@ describe('ALL_TOOLS 集成验证', () => {
         // superpower
         expect(names).toContain('opencode_skill_list');
         expect(names).toContain('opencode_skill_use');
+
+        // Stop Hook
+        expect(names).toContain('opencode_hook_dispatch');
+        expect(names).toContain('opencode_hook_result');
+        expect(names).toContain('opencode_hook_wake');
     });
 });
