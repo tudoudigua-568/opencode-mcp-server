@@ -144,10 +144,23 @@ opencode-mcp-server/
 │   │   ├── opencode-skills.ts      # superpower（2个）
 │   │   └── opencode-hooks.ts       # Stop Hook 任务回调（3个）
 │   └── __tests__/                  # 单元测试
+├── skills/
+│   └── opencode-mcp-adapter/       # OpenClaw Agent Skill
+│       ├── SKILL.md                # 技能定义（21 个工具指南）
+│       └── examples/               # 配置示例
+├── claude-code-hooks/              # Claude Code Stop Hook 脚本
 ├── package.json
 ├── tsconfig.json
 └── README.md
 ```
+
+## OpenClaw Agent Skill
+
+本项目包含一个 OpenClaw Agent Skill，位于 `skills/opencode-mcp-adapter/`。
+
+将 `skills/opencode-mcp-adapter/` 目录复制到 OpenClaw 的技能目录，代理即可自动发现并使用所有 21 个 MCP 工具。
+
+详见 [`SKILL.md`](./skills/opencode-mcp-adapter/SKILL.md)。
 
 ## 开发
 

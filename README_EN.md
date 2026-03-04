@@ -144,10 +144,23 @@ opencode-mcp-server/
 │   │   ├── opencode-skills.ts      # superpower (2 tools)
 │   │   └── opencode-hooks.ts       # Stop Hook callback (3 tools)
 │   └── __tests__/                  # Unit tests
+├── skills/
+│   └── opencode-mcp-adapter/       # OpenClaw Agent Skill
+│       ├── SKILL.md                # Skill definition (21 tools guide)
+│       └── examples/               # Config examples
+├── claude-code-hooks/              # Claude Code Stop Hook scripts
 ├── package.json
 ├── tsconfig.json
 └── README.md
 ```
+
+## OpenClaw Agent Skill
+
+This project includes an OpenClaw Agent Skill at `skills/opencode-mcp-adapter/`.
+
+Copy the `skills/opencode-mcp-adapter/` directory to your OpenClaw skills folder. The agent will automatically discover and use all 21 MCP tools.
+
+See [`SKILL.md`](./skills/opencode-mcp-adapter/SKILL.md) for details.
 
 ## Development
 

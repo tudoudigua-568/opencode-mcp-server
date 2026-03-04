@@ -1,0 +1,16 @@
+{
+    "mcpServers": {
+        "opencode-adapter": {
+            "type": "stdio",
+            "command": "node",
+            "args": [
+                "D:/mcp/opencode-mcp-server/dist/index.js"
+            ],
+            "env": {
+                "OPENCODE_TIMEOUT_MS": "120000",
+                "OPENCODE_WORKSPACE": "D:/projects",
+                "HOOK_RESULT_DIR": "D:/data/open-code-results"
+            }
+        }
+    }
+}
