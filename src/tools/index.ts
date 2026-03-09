@@ -35,6 +35,7 @@ import { opencodeServeStartTool, opencodeServeStatusTool } from './opencode-serv
 
 // oh-my-opencode 多代理编排
 import { opencodeSisyphusTool, opencodePrometheusTool, opencodeSubagentTool } from './opencode-omoc.js';
+import { opencodeBrainstormRalphTool } from './opencode-brainstorm-ralph.js';
 
 // superpower skill 技能系统
 import { opencodeSkillListTool, opencodeSkillUseTool } from './opencode-skills.js';
@@ -74,6 +75,7 @@ export const ALL_TOOLS: ToolDefinition[] = [
     opencodeSisyphusTool,
     opencodePrometheusTool,
     opencodeSubagentTool,
+    opencodeBrainstormRalphTool,
 
     // === superpower skill ===
     opencodeSkillListTool,

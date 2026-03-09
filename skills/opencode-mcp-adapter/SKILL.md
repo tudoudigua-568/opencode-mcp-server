@@ -2,7 +2,7 @@
 name: opencode-mcp-adapter
 description: >
   Use OpenCode AI coding capabilities via MCP protocol.
-  Provides 21 tools covering AI coding, session management, agent orchestration,
+  Provides 22 tools covering AI coding, session management, agent orchestration,
   skill system, and task callback hooks. Cross-platform (Windows/Linux/macOS).
 version: 1.1.0
 author: shichao.han
@@ -55,7 +55,7 @@ Configure in your MCP client settings:
 }
 ```
 
-## Available Tools (21)
+## Available Tools (22)
 
 ### Core (3)
 
@@ -95,13 +95,14 @@ Configure in your MCP client settings:
 | `opencode_serve_start` | Start an HTTP/Web server for headless access. |
 | `opencode_serve_status` | Check if the server is running. |
 
-### Multi-Agent — oh-my-opencode (3)
+### Multi-Agent — oh-my-opencode (4)
 
 | Tool | Usage |
 |------|-------|
 | `opencode_sisyphus` | Complex tasks: Sisyphus plans, delegates, executes, and verifies. |
 | `opencode_prometheus` | Analysis & planning: Prometheus asks clarifying questions and generates work plans. |
 | `opencode_subagent` | Parallel execution: dispatch sub-tasks to independent agents. |
+| `opencode_brainstorm_ralph` | Combined workflow: uses brainstorm skill to create a plan, then uses @ralph to implement it automatically. |
 
 ### Superpower Skills (2)
 

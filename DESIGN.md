@@ -18,7 +18,7 @@ OpenCode MCP Server is an **adapter layer** that exposes the full capabilities o
 ┌──────────────────────┐
 │  opencode-mcp-server │
 │  ┌────────────────┐  │
-│  │  Tool Registry │◄─┼── Registers all 21 tools at startup
+│  │  Tool Registry │◄─┼── Registers all 22 tools at startup
 │  └───────┬────────┘  │
 │          │ dispatch   │
 │  ┌───────▼────────┐  │
@@ -94,7 +94,7 @@ No modification of the server core, registry infrastructure, or executor is need
 | **Tool Definition** | `tool-definition.ts` | TypeScript interface / Zod schema for tool contracts |
 | **Tool Registry** | `tool-registry.ts` | In-memory map of `name → ToolDefinition` |
 | **Core Tools** | `tools/opencode-run.ts` etc. | Implement individual tool handlers |
-| **Multi-Agent** | `tools/opencode-omoc.ts` | oh-my-opencode Sisyphus / Prometheus / SubAgent |
+| **Multi-Agent** | `tools/opencode-omoc.ts` and `tools/opencode-brainstorm-ralph.ts` | oh-my-opencode Sisyphus / Prometheus / SubAgent / custom agent loops |
 | **Skills** | `tools/opencode-skills.ts` | superpower skill listing & activation |
 | **Stop Hook** | `tools/opencode-hooks.ts` | Task dispatch, result reading, wake file processing |
 

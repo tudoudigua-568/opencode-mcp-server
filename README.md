@@ -29,7 +29,7 @@ npm install
 npm run build
 ```
 
-## 21 个 MCP 工具
+## 22 个 MCP 工具
 
 ### 核心（3）
 
@@ -69,13 +69,14 @@ npm run build
 | `opencode_serve_start` | 启动 HTTP/Web 服务器 |
 | `opencode_serve_status` | 检测服务器运行状态 |
 
-### oh-my-opencode 多代理（3）
+### oh-my-opencode 多代理（4）
 
 | 工具 | 说明 |
 |------|------|
 | `opencode_sisyphus` | Sisyphus 编排（规划→委派→执行→验证） |
 | `opencode_prometheus` | Prometheus 咨询（分析→规划） |
 | `opencode_subagent` | 异步子代理调用 |
+| `opencode_brainstorm_ralph` | 使用 brainstorm 技能写出 plan，然后交给 ralph 去逐步执行 |
 
 ### superpower skill（2）
 
@@ -158,7 +159,7 @@ opencode-mcp-server/
 
 本项目包含一个 OpenClaw Agent Skill，位于 `skills/opencode-mcp-adapter/`。
 
-将 `skills/opencode-mcp-adapter/` 目录复制到 OpenClaw 的技能目录，代理即可自动发现并使用所有 21 个 MCP 工具。
+将 `skills/opencode-mcp-adapter/` 目录复制到 OpenClaw 的技能目录，代理即可自动发现并使用所有 22 个 MCP 工具。
 
 详见 [`SKILL.md`](./skills/opencode-mcp-adapter/SKILL.md)。
 

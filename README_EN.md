@@ -29,7 +29,7 @@ npm install
 npm run build
 ```
 
-## 21 MCP Tools
+## 22 MCP Tools
 
 ### Core (3)
 
@@ -69,13 +69,14 @@ npm run build
 | `opencode_serve_start` | Start HTTP/Web server |
 | `opencode_serve_status` | Check server running status |
 
-### oh-my-opencode Multi-Agent (3)
+### oh-my-opencode Multi-Agent (4)
 
 | Tool | Description |
 |------|-------------|
 | `opencode_sisyphus` | Sisyphus orchestration (Plan → Delegate → Execute → Verify) |
 | `opencode_prometheus` | Prometheus consultation (Analyze → Plan) |
 | `opencode_subagent` | Asynchronous sub-agent invocation |
+| `opencode_brainstorm_ralph` | Uses brainstorm skill to formulate a plan, then delegates execution to ralph step-by-step |
 
 ### Superpower Skill (2)
 
@@ -158,7 +159,7 @@ opencode-mcp-server/
 
 This project includes an OpenClaw Agent Skill at `skills/opencode-mcp-adapter/`.
 
-Copy the `skills/opencode-mcp-adapter/` directory to your OpenClaw skills folder. The agent will automatically discover and use all 21 MCP tools.
+Copy the `skills/opencode-mcp-adapter/` directory to your OpenClaw skills folder. The agent will automatically discover and use all 22 MCP tools.
 
 See [`SKILL.md`](./skills/opencode-mcp-adapter/SKILL.md) for details.
 

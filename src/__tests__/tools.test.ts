@@ -86,8 +86,8 @@ describe('ToolRegistry', () => {
 });
 
 describe('ALL_TOOLS 集成验证', () => {
-    it('应包含 21 个工具', () => {
-        expect(ALL_TOOLS).toHaveLength(21);
+    it('应包含 22 个工具', () => {
+        expect(ALL_TOOLS).toHaveLength(22);
     });
 
     it('所有工具名称应唯一', () => {
@@ -113,7 +113,7 @@ describe('ALL_TOOLS 集成验证', () => {
     it('应可批量注册到 ToolRegistry', () => {
         const registry = new ToolRegistry();
         registry.registerAll(ALL_TOOLS);
-        expect(registry.size).toBe(21);
+        expect(registry.size).toBe(22);
     });
 
     it('工具名称列表应包含全部预期工具', () => {
@@ -146,6 +146,7 @@ describe('ALL_TOOLS 集成验证', () => {
         expect(names).toContain('opencode_sisyphus');
         expect(names).toContain('opencode_prometheus');
         expect(names).toContain('opencode_subagent');
+        expect(names).toContain('opencode_brainstorm_ralph');
 
         // superpower
         expect(names).toContain('opencode_skill_list');
